@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 import MedicalPrescriptionList from './MedicalPrescriptionList';
 import Prescription from './Prescription';
+import MedicalPrescriptionPanel from './MedicalPrescriptionPanel'
+
 
 var treatId = "Treat Id is : 911"
 var patientName =" Name is : Dave  King"
@@ -27,15 +29,15 @@ export default function App() {
        <h2>  Task 2: MedicalTreatment Results: </h2>
       <MedicalPrescriptionList json={prescriptionAsJson}  />
 
-      <h2>Task3: Results of patient Names after filter: </h2>
+      <h2>Task2b: Results of patient Names after filter: </h2>
      
      {dataString.filter(record => record.category =="Antibiotic").map(filteredRecord => (
         <li>
           {filteredRecord.name}
         </li>
       ))}
-
-      
+ <h2>Task 3: Results of patient Names after filter: </h2>
+      <MedicalPrescriptionPanel/>
     </div>
   );
 }
