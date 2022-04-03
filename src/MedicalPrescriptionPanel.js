@@ -11,7 +11,7 @@ function MedicalPrescriptionPanel() {
   const [dateIssued, setDateIssued] = React.useState('');// 
 
 function  display (){
-alert ("[" +  "name=" +name ,   "treatId=" +treatId  +  "treatCourseId=" +treatCourseId  +  "type=" +type +   "dateIssued=" +dateIssued  +   "category=" +category +"]"   )
+alert ("[" +  "name=" +name + "treatId=" +treatId  +  "treatCourseId=" +treatCourseId  +  "type=" +type +   "dateIssued=" +dateIssued  +   "category=" +category +"]"   )
 
 }
 
