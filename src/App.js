@@ -3,6 +3,13 @@ import './style.css';
 import MedicalPrescriptionList from './MedicalPrescriptionList';
 import Prescription from './Prescription';
 
+var treatId = "Treat Id is : 911"
+var patientName =" Name is : Dave  King"
+var category = " Category is: minor"
+var type =" Type is : vaccination"
+var treatCourseId = " Treatcourseid is : 1112"
+var dateIssued = " StartDate is :  02/12/21"
+
 export default function App() {
   const prescriptionAsJson =
   '[{"treatId":"001", "treatCourseId":"101AFC", "type":"Amoxicillin", "category":"Antibiotic", "name":"Joe Bloggs", "dateIssued":"31/01/2022"},' +
@@ -14,6 +21,10 @@ export default function App() {
 
   return (
     <div>
+       <h1>  Task 1: MedicalTreatment Results: </h1>
+       <Prescription treatId={treatId}    treatCourseId= {treatCourseId}  name ={patientName} category={category } dateIssued= {dateIssued} type ={type}/>
+      
+       <h1>  Task 2: MedicalTreatment Results: </h1>
       <MedicalPrescriptionList json={prescriptionAsJson}  />
       
     </div>
