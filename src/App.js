@@ -36,7 +36,7 @@ export default function App() {
           {filteredRecord.name}
         </li>
       ))}
- <h2>Task 3: Results of patient Names after filter: </h2>
+ <h2>Task 3:  </h2>
       <MedicalPrescriptionPanel/>
     </div>
   );
