@@ -17,15 +17,24 @@ export default function App() {
   '{"treatId":"003", "treatCourseId":"103AFC", "type":"Paracetamol", "category":"Painkiller", "name":"Georgia Smith", "dateIssued":"11/01/2022"},' +
   '{"treatId":"004", "treatCourseId":"104AFC", "type":"Codeine", "category":"Painkiller", "name":"Ross Cooper", "dateIssued":"01/02/2022"},' +
   '{"treatId":"005", "treatCourseId":"105AFC", "type":"Doxycycline", "category":"Antibiotic", "name":"Linda Jones", "dateIssued":"24/02/2022"}]';
-
+  const dataString = JSON.parse(prescriptionAsJson);
 
   return (
     <div>
-       <h1>  Task 1: MedicalTreatment Results: </h1>
+       <h2>  Task 1: MedicalTreatment Results: </h2>
        <Prescription treatId={treatId}    treatCourseId= {treatCourseId}  name ={patientName} category={category } dateIssued= {dateIssued} type ={type}/>
       
-       <h1>  Task 2: MedicalTreatment Results: </h1>
+       <h2>  Task 2: MedicalTreatment Results: </h2>
       <MedicalPrescriptionList json={prescriptionAsJson}  />
+
+      <h2>Task3: Results of patient Names after filter: </h2>
+     
+     {dataString.filter(record => record.category =="Antibiotic").map(filteredRecord => (
+        <li>
+          {filteredRecord.name}
+        </li>
+      ))}
+
       
     </div>
   );
