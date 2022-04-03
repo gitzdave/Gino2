@@ -44,12 +44,12 @@ return (
             <br/>
             <input type="text" placeholder='Date Issued' value ={dateIssued} onChange ={e => setDateIssued(e.target.value) }/>
             <br/>
-            <input type="text" placeholder='category' value ={category} onChange ={e => setCategory(e.target.value) }/> 
+            <input type="text" placeholder='Category' value ={category} onChange ={e => setCategory(e.target.value) }/> 
             <br/>
             <input type="text" placeholder='Type' value ={type} onChange ={e => setType(e.target.value) }/> 
   
             <br/>
-            <input type="text" placeholder='treatCourseId' value ={treatCourseId} onChange ={e => setTreatCourseId(e.target.value) }/> 
+            <input type="text" placeholder='TreatCourseId' value ={treatCourseId} onChange ={e => setTreatCourseId(e.target.value) }/> 
             <button onClick={displayHandler}>Display</button>   
             <button onClick={clearhandler}>Clear</button> 
   
